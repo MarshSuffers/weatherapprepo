@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+  </head>
+  <body>
+    <header></header>
+
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>News</li>
+        <li>Weather</li>
+        <li style="float: right">About</li>
+      </ul>
+    </nav>
+
+    <main>
+        <!--Todays Stats-->
+      <section id="topArticle">
+        <article>
+            <h1>LATEST WEATHER</h1>
+            <h2>Weather Summary</h2>
+            <div class="flex-col"></div>
+                <span id="city"><h3>Salt Lake City</h3></span>
+                <span id="day0" class="col-head"><p>Information regarding June 18th, 2026</p></span>
+                <br/>
+               <span id="weather"><p>Currently:Sunny</p></span>
+                  <br/>
+              <span id="temp-data">
+                <span>Tempurature:</span>
+                <span id="data0">81</span>
+                <span>°F</span>
+              </span>
+                  <br/>
+              <span id="feel"><p>Feels Like:Hot(no data on weathersite)</p></span>
+                  <br/>
+                 <span id="humidity"><p>Humidity:16%</p></span>
+                   <br/>
+               <span id="windSpeed"><p>Wind Speed:7 mph</p></span>
+            <img id="sunny" class="weatherIcon" src="sunny.png" alt="a small sun"/>
+            </div>
+        <article>
+      </section>
+      <!--End Todays Stats-->
+
+      <!--5 Day Stats-->
+      <section id="otherArticles">
+        <article type="article" id="5DayStats">
+            <h2>5 DAY FORECAST</h2>
+           <h3>Salt Lake City</h3>
+          <div class="flex-col">
+             <span id="day1" class="col-head">Friday, June 19th</span>
+            <img id="pcloudy" class="weatherIcon" src="pcloudy.png" />
+            <span class="temp-data">
+              <span id="data1">95</span>
+              <span>°F</span>
+             </span>
+           </div>
+           <div class="flex-col">
+           <span id="day2" class="col-head">Saturday, June 20th</span>
+            <img id="sunny" class="weatherIcon" src="sunny.png" />
+            <span class="temp-data">
+              <span id="data2">84</span>
+              <span>°F</span>
+            </span>
+          </div>
+          <div class="flex-col">
+            <span id="day3" class="col-head">Monday, June 21st</span>
+           <img id="sunny" class="weatherIcon" src="sunny.png" />
+            <span class="temp-data">
+             <span id="data3">84</span>
+              <span>°F</span>
+           </span>
+         </div>
+            <div class="flex-col">
+              <span id="day4" class="col-head">Tuesday, June 22nd</span>
+              <img id="sunny" class="weatherIcon" src="sunny.png" />
+              <span class="temp-data">
+                <span id="data4">89</span>
+                <span>°F</span>
+             </span>
+            </div>
+            <div class="flex-col">
+              <span id="day5" class="col-head">Wednesday, June 23rd<span>
+              <img id="sunny" class="weatherIcon" src="sunny.png" />
+            <span class="temp-data">
+               <span id="data5">95</span>
+                <span>°F</span>
+               </span>
+            </div>
+          </article>
+     </section>
+      <!--End 5 Day Stats-->
+    </main>
+
+    <footer>
+      <p>All images obtained from Icons8</p>
+      <p>
+        (by the time i realized i could use the other images i was already
+        basically done, so. different icons yay.)
+      </p>
+    </footer>
+  </body>
+</html>
