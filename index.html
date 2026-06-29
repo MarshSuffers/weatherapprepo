@@ -1,137 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css"/>
-    <title>My Weather App</title>
-  </head>
-  <body>
-    <header></header>
 
-    <nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Weather and News</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/Umbrella.jpg" alt="rain on Umbrella" height="100" width="100">
+        <nav>
       <ul>
-        <li>Home</li>
-        <li>News</li>
-        <li>Weather</li>
-        <li style="float: right">About</li>
+        <li class="active"><a href="" alt="idk">Home</a> </li>
+        <li><a href="" alt="idk">News</a></li>
+        <li><a href="" alt="idk">Weather</a></li>
+        <li style="float: right;"><a href="" alt="idk">About</a></li>
       </ul>
     </nav>
+    <br>
+    </header>
+    <article>
+        <section>
+            <section class="weather-section">
+        <div class="page">
+          <h1>LATEST WEATHER</h1>
+          <div class="archive">
+            <article class="article">
+              <section id="stats">
+                <div class="summary">
+                  <h2>Weather summary</h2>
+                  <h3 id="five-city">Tooele</h3>
+                  <p>Currently: <span id="current-desc">Clear</span></p>
+                  <p>
+                    Tempature:
+                    <span id="current-temp">75</span> °F
+                  </p>
+                  <p>Wind Chill: <span id="current-windChill">70</span> °F</p>
+                  <p>Humidity: <span id="current-humid">27</span>%</p>
+                  <p>Wind Speed: <span id="current-windSpeed">7</span> mph</p>
+                </div>
+              </section>
+              <div>
+                <img src="https://picsum.photos/400" alt="Random Image" />
+              </div>
+            </article>
 
-    <main>
-        <!--Todays Stats-->
-      <section id="topWeatherArticle">
-        <article>
-            <h1>LATEST WEATHER</h1>
-            <h2>Weather Summary</h2>
-            <div class="flex-col"></div>
-                <span id="city"><h3>Salt Lake City</h3></span>
-                <span id="day0" class="col-head"><p>Information regarding June 18th, 2026</p></span>
-                <br/>
-               <span id="weather"><p>Currently:Sunny</p></span>
-                  <br/>
-              <span id="temp-data">
-                <span>Tempurature:</span>
-                <span id="data0">81</span>
-                <span>°F</span>
-              </span>
-                  <br/>
-              <span id="feel"><p>Feels Like:Hot(no data on weathersite)</p></span>
-                  <br/>
-                 <span id="humidity"><p>Humidity:16%</p></span>
-                   <br/>
-               <span id="windSpeed"><p>Wind Speed:7 mph</p></span>
-            <img id="sunny" class="weatherIcon" src="img/sunny.png" alt="a small sun"/>
+            <!-- 5 day forecast -->
+            <div class="article-five-day">
+              <article id="forecastContainer">
+                <h2 id="forecastTitle">5 Day Forecast</h2>
+                <h3 id="city">Tooele</h3>
+                <div class="flex">
+                  <div class="flex-col">
+                    <span id="dayTitle1" class="col-head">Tuesday</span>
+                    <img id="weatherIcon1" class="weatherIcon" src="images/Sunny.jpg"/>
+                    <span class="temp-data">
+                      <span id="data1">76</span>
+                      <span>°F</span>
+                    </span>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle2" class="col-head">Wednesday</span>
+                    <img id="weatherIcon2" class="weatherIcon" src="images/overcast.jpg" />
+                    <div class="temp-data">
+                      <span id="data2">81</span>
+                      <span>°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle3" class="col-head">Thursday</span>
+                    <img id="weatherIcon3" class="weatherIcon" src="images/partlyCloudy.jpg"/>
+                    <div class="temp-data">
+                      <span id="data3">83</span>
+                      <span>°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle4" class="col-head">Friday</span>
+                    <img id="weatherIcon4" class="weatherIcon" src="images/partlyCloudy.jpg"/>
+                    <div class="temp-data">
+                      <span id="data4">86</span>
+                      <span>°F</span>
+                    </div>
+                  </div>
+                  <div class="flex-col">
+                    <span id="dayTitle5" class="col-head">Saturday</span>
+                    <img id="weatherIcon5" class="weatherIcon" src="images/Sunny.jpg"/>
+                    <div class="temp-data">
+                      <span id="data5">85</span>
+                      <span>°F</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
-        <article>
-      </section>
-      <!--End Todays Stats-->
-
-      <!--5 Day Stats-->
-      <section id="otherWeatherArticles">
-        <article type="article" id="5DayStats">
-            <h2>5 DAY FORECAST</h2>
-           <h3>Salt Lake City</h3>
-          <div class="flex-col">
-             <span id="day1" class="col-head">Friday, June 19th</span>
-            <img id="pcloudy" class="weatherIcon" src="img/pcloudy.png" />
-            <span class="temp-data">
-              <span id="data1">95</span>
-              <span>°F</span>
-             </span>
-           </div>
-           <div class="flex-col">
-           <span id="day2" class="col-head">Saturday, June 20th</span>
-            <img id="sunny" class="weatherIcon" src="img/sunny.png" />
-            <span class="temp-data">
-              <span id="data2">84</span>
-              <span>°F</span>
-            </span>
           </div>
-          <div class="flex-col">
-            <span id="day3" class="col-head">Monday, June 21st</span>
-           <img id="sunny" class="weatherIcon" src="img/sunny.png" />
-            <span class="temp-data">
-             <span id="data3">84</span>
-              <span>°F</span>
-           </span>
-         </div>
-            <div class="flex-col">
-              <span id="day4" class="col-head">Tuesday, June 22nd</span>
-              <img id="sunny" class="weatherIcon" src="img/sunny.png" />
-              <span class="temp-data">
-                <span id="data4">89</span>
-                <span>°F</span>
-             </span>
-            </div>
-            <div class="flex-col">
-              <span id="day5" class="col-head">Wednesday, June 23rd<span>
-              <img id="sunny" class="weatherIcon" src="img/sunny.png" />
-            <span class="temp-data">
-               <span id="data5">95</span>
-                <span>°F</span>
-               </span>
-            </div>
-          </article>
-     </section>
-      <!--End 5 Day Stats-->
+        </div>
+      </section>
+      <hr />
+        <section class="news-section">
+        <div class="page">
+          <h1>LATEST NEWS</h1>
+          <div class="archive">
+            <article class="article">
+              <img id="header-img" alt="main article" src="images/BreakingNews.jpeg"/>
+              <h2>
+                <a id="header-article"></a>
+              </h2>
+              <p id="header-desc">No Article Description.</p>
+            </article>
+            <article class="article">
+              <img
+                id="article-img-1"
+                src="images/CBS.png"
+                alt="article1"
+              />
+              <h3>
+                <a id="article-link-1">No Article Title</a>
+              </h3>
+              <p id="article-desc-1">No Article Description.</p>
+            </article>
+            <article class="article">
+              <img
+                id="article-img-2"
+                src="images/ABC.jpeg"
+                alt="article2"
+              />
+              <h3>
+                <a id="article-link-1">No Article Title</a>
+              </h3>
+              <p id="article-desc-1">No Article Description.</p>
+            </article>
+            <article class="article">
+              <img
+                id="article-img-3"
+                src="images/NBC.png"
+                alt="main article"
+              />
+              <h3>
+                <a id="article-link-1">No Article Title</a>
+              </h3>
+              <p id="article-desc-1">No Article Description.</p>
+            </article>
+            <article class="article">
+              <img
+                id="article-img-4"
+                src="images/thunderStorms.jpg"
+                alt="article4"
+              />
+              <h3>
+                <a id="article-link-1">No Article Title</a>
+              </h3>
+              <p id="article-desc-1">No Article Description.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </article>
 
-      <!-- News Section-->
-       <section id="topNewsArticle">
-        <article type="article" id="newsArticle0">
-            <h2>LATEST NEWS</h2>
-            <img scr="temp" alt="blank on purpose">
-            <p>There is currently no latest news</p>
-        </article>
-       </section>
-       <section id="otherNewsArticles">
-        <article type="article" id="newsArticle1">
-            <h3>NEWS TITLE</h3>
-            <p>There is currently no latest news</p>
-            <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="placeholderKitten">
-        </article>
-         <article type="article" id="newsArticle2">
-            <h3>NEWS TITLE</h3>
-            <p>There is currently no latest news</p>
-            <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="placeholderKitten">
-        </article>
-        <article type="article" id="newsArticle3">
-            <h3>NEWS TITLE</h3>
-            <p>There is currently no latest news</p>
-            <img src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="placeholderKitten">
-        </article>
+</body>
 
-       </section>
-
-      <!-- End News Section-->
-    </main>
-
-    <footer>
-      <p>   All weather icons obtained from Icons8 <br>
-            &copy; 2026| Gabrielle Kinkaid | <a href="https://www.tooeletech.edu/">Tooele Technical College</a>
-            <br>
-            Last Updated: June 18th, 2026
-      </p>
-    </footer>
-  </body>
 </html>
